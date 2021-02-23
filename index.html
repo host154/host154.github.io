@@ -8,6 +8,31 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    </head>
     <body>
+        <div id="loader" class="preloader">
+            <div class="preload-content">
+            <div id="sonar-load">
+                <img src="loading-logo.gif" alt="loading">
+                <p>Loading...</p>
+            </div>
+            </div>
+        </div>
+
+        <script> 
+            document.onreadystatechange = function() { 
+                if (document.readyState !== "complete") { 
+                    document.querySelector( 
+                      "body").style.visibility = "hidden"; 
+                    document.querySelector( 
+                      "#loader").style.visibility = "visible"; 
+                } else { 
+                    document.querySelector( 
+                      "#loader").style.display = "none"; 
+                    document.querySelector( 
+                      "body").style.visibility = "visible"; 
+                } 
+            }; 
+        </script>     <div class="top" id="Home">
+        
         <div class="top" id="Home">
             <nav class="navbar">
                 <ul>
